@@ -1,0 +1,31 @@
+.card {
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    margin-top: 15px;
+}
+
+.card:hover {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-img-top{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+}
+
+.food-details-item {
+    margin-bottom: 100px;
+}
+
+.right-part {
+    margin-top: 100px;
+    padding-right: 232px;
+    padding-left: 168px;
+}
+
+.button-margin {
+    margin-top: 21px;
+}

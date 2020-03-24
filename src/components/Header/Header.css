@@ -1,0 +1,25 @@
+.navbar-brand {
+    margin-right: 11rem;
+}
+.navbar-brand img {
+    margin-left: 81px;
+    width: 15%;
+}
+.navbar-nav .nav-item {
+    padding-right: 28px;
+}
+.navbar-nav .nav-link {
+    padding-left: 28px;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 1.5rem;
+}
+.signUp-btn {
+    background-image: linear-gradient(to bottom, #e60658f1 0%, #e60657e3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 21px;
+    padding: 5px 15px;
+    font-size: 13px;
+    font-weight: 500;
+}

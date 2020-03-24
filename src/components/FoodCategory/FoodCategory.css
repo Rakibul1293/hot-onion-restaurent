@@ -1,0 +1,64 @@
+.carousel-inner {
+    margin-bottom:50px;
+}
+
+.carousel-inner p {
+    width: 369px;
+}
+
+.carousel-indicators {
+    position: static;
+    margin-top: 47px;
+}
+
+li {
+    list-style: none;
+}
+
+.carousel-indicators li {
+    width: 30px;
+    height: 7px;
+    border-radius: 30px;
+    opacity: 1;
+    text-indent: 0px;
+    background-color: #6d6a6a;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+    float: left;
+    width: 3%;
+    height: 3px;
+    margin: 71px;
+    border-radius: 0;
+    border: 0;
+    background: transparent;
+}
+ol.carousel-indicators li.active {
+    background: #e60658f1;
+}
+
+ol.carousel-indicators li span, ol.carousel-indicators li.active span {
+    position: relative;
+    bottom: 23px;
+    right: 8px;
+}
+
+button.btn {
+    color: #fff;
+    border: none;
+}
+
+/* .card-deck {
+    margin-bottom: 51px;
+    margin-top: 9px;
+    margin-left: auto;
+} */
+
+/* a {
+    color: #000;
+}
+a:hover {
+    color: #000;
+    text-decoration: none;
+} */

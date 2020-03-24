@@ -1,0 +1,23 @@
+div {
+    height: 100%;
+}
+.ship-form img {
+    width: 250px;
+    padding-bottom: 65px;
+    margin-left: 450px;
+}
+.bg {
+    background-image: url("./images/bannerbackground.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.ship-form {
+    margin: 0px;
+}
+form {
+    margin-left: 450px;
+}

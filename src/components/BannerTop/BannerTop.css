@@ -1,0 +1,48 @@
+.top-banner {
+    background-image: url("images/bannerbackground.png");
+    padding: 175px;
+    background-size: cover;
+	background-repeat: no-repeat;
+}
+.txt-dec {
+    font-size: 45px;
+    font-weight: 400;
+    position: relative;
+    bottom: 69px;
+}
+.box-width {
+    max-width: 375px;
+    margin: 0 auto;
+}
+.input-group>.form-control {
+    bottom: 51px;
+}
+.input-group>.form-control:focus {
+    z-index: 0;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #d5d7da;
+}
+.form-rounded {
+    border-radius: 21px;
+    padding: 1.1rem;
+}
+.top-banner .btn {
+    background-image: linear-gradient(to bottom, #e60658f1 0%, #e60657e3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 21px;
+    padding: 10px 41px;;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+    right: 281px;
+    bottom: 51px;
+}
+.btn:hover {
+    color: #fff;
+}
+.btn:focus {
+    box-shadow: none;
+}
