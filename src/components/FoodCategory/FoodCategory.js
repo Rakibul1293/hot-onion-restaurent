@@ -46,194 +46,230 @@ const FoodCategory = () => {
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"><span onClick={() => selectedMenuData("dinner", dinner)}>Dinner</span></li>
                 </ol>
 
-                <div className="carousel-inner text-center">
-                    <div className="carousel-item text-center">
-                        <li></li>
-                        <div className="card-deck">
-                            {
-                                eventType === "FoodCategoryItem" &&
-                                foodData.map(foodData => <FoodCategoryItem
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodData.key}
-                                    foodData={foodData}
-                                ></FoodCategoryItem>)
-                            }
-                            {
-                                eventType === "FoodDetails" &&
-                                foodDetail.map(foodDetail => <FoodDetails
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodDetail.key}
-                                    eventType={eventType}
-                                    foodDetail={foodDetail}
-                                ></FoodDetails>)
-                            }
-                            {
-                                eventType === "addCart" &&
-                                foodDetail.map(foodDetail => <FoodDetails
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodDetail.key}
-                                    eventType={eventType}
-                                    foodDetail={foodDetail}
-                                ></FoodDetails>)
-                            }
-                        </div>
+                {
+                    eventType === "FoodCategoryItem" || eventType === "FoodDetails" || eventType === "addCart" ?
+                        <div className="carousel-inner text-center">
+                            <div className="carousel-item text-center">
+                                <li></li>
+                                <div className="card-deck">
+                                    {
+                                        eventType === "FoodCategoryItem" &&
+                                        foodData.map(foodData => <FoodCategoryItem
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodData.key}
+                                            foodData={foodData}
+                                        ></FoodCategoryItem>)
+                                    }
+                                    {
+                                        eventType === "FoodDetails" &&
+                                        foodDetail.map(foodDetail => <FoodDetails
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodDetail.key}
+                                            eventType={eventType}
+                                            foodDetail={foodDetail}
+                                        ></FoodDetails>)
+                                    }
+                                    {
+                                        eventType === "addCart" &&
+                                        foodDetail.map(foodDetail => <FoodDetails
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodDetail.key}
+                                            eventType={eventType}
+                                            foodDetail={foodDetail}
+                                        ></FoodDetails>)
+                                    }
+                                </div>
 
-                        {
-                            eventType === "FoodCategoryItem" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <button type="button" className="btn btn-secondary  disabled">Checkout Your Food</button>
-                                </div>
+                                {
+                                    eventType === "FoodCategoryItem" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary  disabled">
+                                                Checkout Your Food
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                {
+                                    eventType === "FoodDetails" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary disabled ">
+                                                Checkout Your Food
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                {
+                                    eventType === "addCart" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <a href="/login">
+                                                <button
+                                                    onClick={(e) => handleFoodItemRoute(e, "login", "login")}
+                                                    type="button"
+                                                    className="btn btn-primary">
+                                                    Checkout Your Food
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
                             </div>
-                        }
-                        {
-                            eventType === "FoodDetails" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <button type="button" className="btn btn-secondary disabled ">Checkout Your Food</button>
-                                </div>
-                            </div>
-                        }
-                        {
-                            eventType === "addCart" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <a href="/login">
-                                        <button type="button" className="btn btn-primary">
-                                            Checkout Your Food
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    </div>
-
-
-
-                    <div className="carousel-item active text-center">
-                        <li></li>
-                        <div className="card-deck">
-                            {
-                                eventType === "FoodCategoryItem" &&
-                                foodData.map(foodData => <FoodCategoryItem
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodData.key}
-                                    foodData={foodData}
-                                ></FoodCategoryItem>)
-                            }
-                            {
-                                eventType === "FoodDetails" &&
-                                foodDetail.map(foodDetail => <FoodDetails
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodDetail.key}
-                                    eventType={eventType}
-                                    foodDetail={foodDetail}
-                                ></FoodDetails>)
-                            }
-                            {
-                                eventType === "addCart" &&
-                                foodDetail.map(foodDetail => <FoodDetails
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodDetail.key}
-                                    eventType={eventType}
-                                    foodDetail={foodDetail}
-                                ></FoodDetails>)
-                            }
-                        </div>
-
-                        {
-                            eventType === "FoodCategoryItem" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <button type="button" className="btn btn-secondary  disabled">Checkout Your Food</button>
-                                </div>
-                            </div>
-                        }
-                        {
-                            eventType === "FoodDetails" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <button type="button" className="btn btn-secondary disabled ">Checkout Your Food</button>
-                                </div>
-                            </div>
-                        }
-                        {
-                            eventType === "addCart" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <a href="/login">
-                                        <button type="button" className="btn btn-primary">
-                                            Checkout Your Food
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    </div>
 
 
 
-                    <div className="carousel-item text-center">
-                        <li></li>
-                        <div className="card-deck">
-                            {
-                                eventType === "FoodCategoryItem" &&
-                                foodData.map(foodData => <FoodCategoryItem
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodData.key}
-                                    foodData={foodData}
-                                ></FoodCategoryItem>)
-                            }
-                            {
-                                eventType === "FoodDetails" &&
-                                foodDetail.map(foodDetail => <FoodDetails
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodDetail.key}
-                                    eventType={eventType}
-                                    foodDetail={foodDetail}
-                                ></FoodDetails>)
-                            }
-                            {
-                                eventType === "addCart" &&
-                                foodDetail.map(foodDetail => <FoodDetails
-                                    handleFoodItemRoute={handleFoodItemRoute}
-                                    key={foodDetail.key}
-                                    eventType={eventType}
-                                    foodDetail={foodDetail}
-                                ></FoodDetails>)
-                            }
-                        </div>
+                            <div className="carousel-item active text-center">
+                                <li></li>
+                                <div className="card-deck">
+                                    {
+                                        eventType === "FoodCategoryItem" &&
+                                        foodData.map(foodData => <FoodCategoryItem
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodData.key}
+                                            foodData={foodData}
+                                        ></FoodCategoryItem>)
+                                    }
+                                    {
+                                        eventType === "FoodDetails" &&
+                                        foodDetail.map(foodDetail => <FoodDetails
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodDetail.key}
+                                            eventType={eventType}
+                                            foodDetail={foodDetail}
+                                        ></FoodDetails>)
+                                    }
+                                    {
+                                        eventType === "addCart" &&
+                                        foodDetail.map(foodDetail => <FoodDetails
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodDetail.key}
+                                            eventType={eventType}
+                                            foodDetail={foodDetail}
+                                        ></FoodDetails>)
+                                    }
+                                </div>
 
-                        {
-                            eventType === "FoodCategoryItem" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <button type="button" className="btn btn-secondary  disabled">Checkout Your Food</button>
-                                </div>
+                                {
+                                    eventType === "FoodCategoryItem" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary  disabled">
+                                                Checkout Your Food
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                {
+                                    eventType === "FoodDetails" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary disabled">
+                                                Checkout Your Food
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                {
+                                    eventType === "addCart" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <a href="/login">
+                                                <button
+                                                    onClick={(e) => handleFoodItemRoute(e, "login", "login")}
+                                                    type="button"
+                                                    className="btn btn-primary">
+                                                    Checkout Your Food
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
                             </div>
-                        }
-                        {
-                            eventType === "FoodDetails" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <button type="button" className="btn btn-secondary disabled">Checkout Your Food</button>
+
+
+
+                            <div className="carousel-item text-center">
+                                <li></li>
+                                <div className="card-deck">
+                                    {
+                                        eventType === "FoodCategoryItem" &&
+                                        foodData.map(foodData => <FoodCategoryItem
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodData.key}
+                                            foodData={foodData}
+                                        ></FoodCategoryItem>)
+                                    }
+                                    {
+                                        eventType === "FoodDetails" &&
+                                        foodDetail.map(foodDetail => <FoodDetails
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodDetail.key}
+                                            eventType={eventType}
+                                            foodDetail={foodDetail}
+                                        ></FoodDetails>)
+                                    }
+                                    {
+                                        eventType === "addCart" &&
+                                        foodDetail.map(foodDetail => <FoodDetails
+                                            handleFoodItemRoute={handleFoodItemRoute}
+                                            key={foodDetail.key}
+                                            eventType={eventType}
+                                            foodDetail={foodDetail}
+                                        ></FoodDetails>)
+                                    }
                                 </div>
+
+                                {
+                                    eventType === "FoodCategoryItem" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary  disabled">Checkout Your Food
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                {
+                                    eventType === "FoodDetails" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <button
+                                                type="button"
+                                                className="btn btn-secondary disabled">
+                                                Checkout Your Food
+                                            </button>
+                                        </div>
+                                    </div>
+                                }
+                                {
+                                    eventType === "addCart" &&
+                                    <div className="row">
+                                        <div className="col-md-12">
+                                            <a href="/login">
+                                                <button
+                                                    onClick={(e) => handleFoodItemRoute(e, "login", "login")}
+                                                    type="button"
+                                                    className="btn btn-primary">
+                                                    Checkout Your Food
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
                             </div>
-                        }
-                        {
-                            eventType === "addCart" &&
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <a href="/login">
-                                        <button type="button" className="btn btn-primary">
-                                            Checkout Your Food
-                                        </button>
-                                    </a>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                </div>
+                        </div> :
+                        <Login></Login>
+                }
             </div>
         </div >
     );

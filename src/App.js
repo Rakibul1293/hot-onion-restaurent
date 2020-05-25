@@ -18,7 +18,7 @@ function App(props) {
         <Router>
           <Switch>
             <Route path="/login">
-              <Login></Login>
+              {/* <Login></Login> */}
             </Route>
           </Switch>
         </Router>
